@@ -59,6 +59,7 @@ label {
   border: none;
   background-color: var(--Very-light-grayish-cyan);
   color: var(--Very-dark-cyan);
+  cursor: none;
 }
 .number-of-people {
   padding-left: 80%;
@@ -176,6 +177,10 @@ input:focus,
   color: #fff;
 }
 
+input:focus:not(.bill, .number-of-people) {
+  background-color: hsl(172, 67%, 45%);
+  color: var(--Very-dark-cyan);
+}
 .percentage-div input:last-child {
   color: var(--Dark-grayish-cyan);
 }
