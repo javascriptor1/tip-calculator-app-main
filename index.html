@@ -15,60 +15,80 @@
     <script src="main.js" defer></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <h1>SPLI<br />TTER</h1>
 
     <main>
-      <div><label for="bill">Bill</label></div>
-      <div>
-        <img src="images/icon-dollar.svg" alt="dollar sign" />
-        <input type="number" id="bill" />
-      </div>
-
-      <div>
-        <label for="tip-percentage">Select Tip %</label>
-        <div>
-          <p>5%</p>
-          <p>10%</p>
-          <p>15%</p>
-          <p>25%</p>
-          <p>50%</p>
-          <input type="number" id="custom-percentage" placeholder="Custom" />
+      <form action="/" novalidate id="form" class="form">
+        <div><label for="bill">Bill</label></div>
+        <div class="bill-div">
+          <img src="images/icon-dollar.svg" alt="dollar sign" />
+          <input type="number" id="bill" value="142.55" class="bill" />
         </div>
-        <div>
+        <div class="select-div">
+          <label for="tip-percentage">Select Tip %</label>
+        </div>
+        <div class="percentage-div">
+          <input value="5%" type="text" id="5-percent" title="selection 5%" />
+          <input
+            value="10%"
+            type="text"
+            id="10-percent"
+            title="selection 10%"
+          />
+          <input
+            value="15%"
+            type="text"
+            id="15-percent"
+            title="selection 15%"
+          />
+          <input
+            value="25%"
+            type="text"
+            id="25-percent"
+            title="selection 25%"
+          />
+          <input
+            value="50%"
+            type="text"
+            id="50-percent"
+            title="selection 50%"
+          />
+          <input
+            type="number"
+            id="custom-percentage"
+            placeholder="Custom"
+            title="custom selection"
+          />
+        </div>
+        <div class="number-of-people-div">
           <div><label for="number-of-people">Number of People</label></div>
           <img src="images/icon-person.svg" alt="person icon" />
-          <input type="number" id="number-of-people" placeholder="" />
+          <input
+            type="number"
+            id="number-of-people"
+            placeholder=""
+            class="number-of-people"
+            value="5"
+          />
         </div>
-      </div>
-      <div>
-        <div>
-          <p>Tip Amount / person</p> <span class="amount-person"></span>
+      </form>
+      <div class="results-div">
+        <div class="amount-person-div">
+          <p class="tip-amount">
+            Tip Amount <br /><span class="person">/ person</span>
+          </p>
+          <p class="dollar-sign">$<span class="amount-person">4.27</span></p>
         </div>
-        <div>
-          <p>Total / person </p> <span class="total-person"></span>
+        <div class="total-person-div">
+          <p class="tip-total">
+            Total <br /><span class="person-total">/ person</span>
+          </p>
+          <p class="dollar-sign">$<span class="total-person">32.79</span></p>
         </div>
-        <button>Reset</button>
+        <button class="reset-btn" type="reset">Reset</button>
       </div>
     </main>
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">MKF</a>
-    </footer>
   </body>
 </html>
