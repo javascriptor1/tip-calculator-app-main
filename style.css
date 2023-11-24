@@ -91,7 +91,7 @@ img[src="images/icon-person.svg"] {
 .percentage-div input {
   background-color: var(--Very-dark-cyan);
   width: 146px;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 6px;
   text-align: center;
   color: #fff;
@@ -217,5 +217,8 @@ label[for="number-of-people"] {
   img[src="images/icon-person.svg"] {
     top: 86px;
     left: 40px;
+  }
+  .amount-person-div {
+    padding: 1rem;
   }
 }
