@@ -171,6 +171,7 @@ label[for="number-of-people"] {
     margin-top: 5rem;
     max-width: 900px;
     gap: 1rem;
+    border-radius: 26px;
   }
   .form,
   .results-div {
@@ -180,6 +181,7 @@ label[for="number-of-people"] {
   }
   .results-div {
     margin-left: 2rem;
+    /* width: 350px; */
   }
   label[for="bill"],
   label[for="tip-percentage"] {
@@ -191,7 +193,7 @@ label[for="number-of-people"] {
   img[src="images/icon-person.svg"] {
     position: absolute;
     top: 18px;
-    left: 41px;
+    left: 21px;
     width: 12px;
   }
 
@@ -212,13 +214,34 @@ label[for="number-of-people"] {
   label[for="number-of-people"] {
     margin-top: 38px;
     display: inline-block;
-    margin-left: 20px;
   }
   img[src="images/icon-person.svg"] {
     top: 86px;
-    left: 40px;
+    left: 20px;
   }
-  .amount-person-div {
-    padding: 1rem;
+  .amount-person-div,
+  .total-person-div {
+    padding: 32px;
+  }
+  .total-person-div {
+    padding-top: 0;
+  }
+  .amount-person,
+  .total-person,
+  .dollar-sign {
+    font-size: 48px;
+  }
+  .total-person-div {
+    margin-top: -10px;
+  }
+  .reset-btn {
+    margin-left: 40px;
+    margin-top: 87px;
+    width: 332px;
+  }
+  .bill-div,
+  .number-of-people-div {
+    position: relative;
+    left: 20px;
   }
 }
