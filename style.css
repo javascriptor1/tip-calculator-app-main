@@ -215,7 +215,7 @@ input:focus,
   .results-div {
     width: 50%;
     margin-top: 7px;
-    padding: 1rem 0;
+    padding: 14px 0;
   }
   .results-div {
     margin-left: 2rem;
@@ -239,6 +239,7 @@ input:focus,
     margin-bottom: 6px;
     color: var(--Grayish-cyan);
     text-align: right;
+    padding-right: 20px;
   }
 
   .percentage-div input {
@@ -265,10 +266,10 @@ input:focus,
   .amount-person,
   .total-person,
   .dollar-sign {
-    font-size: 48px;
+    font-size: 44px;
   }
   .total-person-div {
-    margin-top: -10px;
+    margin-top: 0px;
   }
   .reset-btn {
     margin-left: 40px;
