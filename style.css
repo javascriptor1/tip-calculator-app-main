@@ -199,6 +199,9 @@ input:focus,
 @media (min-width: 1024px) {
   h1 {
     margin-top: 153px;
+    width: 90%;
+    position: relative;
+    left: 84px;
   }
   main {
     display: flex;
