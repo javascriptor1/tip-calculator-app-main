@@ -34,8 +34,10 @@ main {
   background-color: #fff;
   border-top-right-radius: 26px;
   border-top-left-radius: 26px;
+  margin: auto;
   margin-top: 2rem;
   padding: 24px;
+  max-width: 450px;
 }
 label {
   color: var(--Dark-grayish-cyan);
@@ -51,13 +53,12 @@ label {
 .number-of-people {
   width: 100%;
   padding: 6px;
-  padding-left: 65%;
+  text-align: right;
   margin-top: 6px;
   border-radius: 4px;
   border: none;
   background-color: var(--Very-light-grayish-cyan);
   color: var(--Very-dark-cyan);
-  /* font-weight: 700; */
 }
 .number-of-people {
   padding-left: 80%;
@@ -106,6 +107,7 @@ img[src="images/icon-person.svg"] {
 .percentage-div input:last-child::placeholder {
   position: relative;
   left: 13px;
+  color: var(--Dark-grayish-cyan);
 }
 label[for="number-of-people"] {
   margin-top: 2rem;
@@ -141,6 +143,7 @@ label[for="number-of-people"] {
 .total-person,
 .dollar-sign {
   font-size: 32px;
+  color: var(--Strong-cyan);
 }
 
 .reset-btn {
@@ -153,7 +156,42 @@ label[for="number-of-people"] {
   font-size: 20px;
   font-family: "Space Mono", monospace;
   text-transform: uppercase;
-  background-color: var(--Strong-cyan);
+  background-color: #0d686d;
+  color: #065157;
+}
+
+/* Active state styling */
+
+input:focus,
+input:active,
+.percentage-div input:hover:last-child {
+  border: 2px solid hsl(172, 67%, 45%);
+  outline: none;
+  color: var(--Very-dark-cyan);
+}
+input:focus,
+.percentage-div input:hover:last-child {
+  border: 2px solid hsl(172, 67%, 45%);
+  outline: none;
+  color: #fff;
+}
+
+.percentage-div input:last-child {
+  color: var(--Dark-grayish-cyan);
+}
+
+.percentage-div input:hover {
+  background-color: #9fe8df;
+  outline-color: var(--Very-dark-cyan);
+  color: var(--Very-dark-cyan);
+}
+.percentage-div input:hover:last-child {
+  background-color: #fff;
+  color: var(--Very-dark-cyan);
+}
+.reset-btn:hover {
+  background-color: #9fe8df;
+  cursor: pointer;
 }
 
 /* Desktop design  */
@@ -161,15 +199,12 @@ label[for="number-of-people"] {
 @media (min-width: 1024px) {
   h1 {
     margin-top: 153px;
-    position: relative;
-    left: 10px;
   }
   main {
     display: flex;
-    max-width: 750px;
+    max-width: 900px;
     margin: auto;
     margin-top: 5rem;
-    max-width: 900px;
     gap: 1rem;
     border-radius: 26px;
   }
@@ -181,7 +216,6 @@ label[for="number-of-people"] {
   }
   .results-div {
     margin-left: 2rem;
-    /* width: 350px; */
   }
   label[for="bill"],
   label[for="tip-percentage"] {
@@ -192,19 +226,18 @@ label[for="number-of-people"] {
   img[src="images/icon-dollar.svg"],
   img[src="images/icon-person.svg"] {
     position: absolute;
-    top: 18px;
+    top: 20px;
     left: 21px;
     width: 12px;
   }
 
   .bill,
   .number-of-people {
-    padding-left: 73%;
     margin-bottom: 6px;
+    color: var(--Grayish-cyan);
+    text-align: right;
   }
-  .number-of-people {
-    padding-left: 91%;
-  }
+
   .percentage-div input {
     width: 116px;
   }
