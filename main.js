@@ -11,6 +11,7 @@ const resetButton = document.querySelector(".reset-btn");
 const allLabels = document.querySelectorAll(".percent-label");
 const customInput = document.getElementById("custom-percentage");
 const noOfPeopleDiv = document.querySelector(".number-of-people-div");
+const errorMsg = document.querySelector('.error-message')
 let amount = 0;
 let percentage = 0;
 let noOfPeople = 0;
@@ -34,13 +35,10 @@ function customCalculation() {
 
 function numberOfPeople() {
   noOfPeople = +numberOfPeopleInput.value;
-  if (noOfPeople <= 0) {
-    console.log("No of people can not be zero");
-    numberOfPeopleInput.classList.add("error");
-    const errorMsg = document.createElement("p");
-    const textnode = document.createTextNode("");
-    errorMsg.appendChild(textnode);
-    noOfPeopleDiv.prepend(errorMsg);
+  if (noOfPeople <= 0){
+    errorMsg.style.visibility = 'visible'
+  } else{
+    errorMsg.style.visibility = 'hidden'
   }
   calculatetip();
 }
@@ -82,14 +80,6 @@ function calculatetip() {
 
   tipAmountValue = amount * (+percentage / 100);
   totalValue = amount + tipAmountValue;
-
-  console.log("tipAmountValue:" + typeof tipAmountValue);
-  console.log("totalValue :" + typeof totalValue);
-  console.log("amount:" + typeof amount);
-  console.log("percentage:" + typeof percentage);
-  console.log("noOfPeople:" + typeof noOfPeople);
-
- 
 
   if (amount && noOfPeople >= 1) {
     tipAmount.textContent = (tipAmountValue / noOfPeople).toFixed(2);

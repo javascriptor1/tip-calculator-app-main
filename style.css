@@ -220,6 +220,7 @@ input:focus + label {
   color: #e1a696;
   display: inline-block;
   margin-left: 10px;
+  visibility: hidden;
 }
 
 /* Desktop design  */
