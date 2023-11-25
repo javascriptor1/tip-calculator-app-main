@@ -10,7 +10,7 @@
   /* ### Primary */
   --Strong-cyan: hsl(172, 67%, 45%);
   /* ### Neutral */
-  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Very-dark-cyan: #00494d;
   --Dark-grayish-cyan: hsl(186, 14%, 43%);
   --Grayish-cyan: hsl(184, 14%, 56%);
   --Light-grayish-cyan: hsl(185, 41%, 84%);
@@ -61,9 +61,7 @@ label {
   color: var(--Very-dark-cyan);
   cursor: none;
 }
-.number-of-people {
-  padding-left: 80%;
-}
+
 .bill-div,
 .number-of-people-div {
   position: relative;
@@ -90,9 +88,9 @@ img[src="images/icon-person.svg"] {
   gap: 1rem;
   margin-top: -1rem;
 }
-.percentage-div input {
+.percentage-div label {
   background-color: var(--Very-dark-cyan);
-  width: 146px;
+  width: 147px;
   border-radius: 6px;
   padding: 6px;
   text-align: center;
@@ -101,8 +99,18 @@ img[src="images/icon-person.svg"] {
   border: none;
   cursor: pointer;
 }
+
+.percentage-div input {
+  position: absolute;
+  left: -9999px;
+}
+
 .percentage-div input:last-child {
   background-color: var(--Very-light-grayish-cyan);
+  position: initial;
+  left: 0;
+  border: none;
+  width: 116px;
 }
 
 .percentage-div input:last-child::placeholder {
@@ -163,44 +171,55 @@ label[for="number-of-people"] {
 
 /* Active state styling */
 
-input:focus,
-input:active,
-.percentage-div input:hover:last-child {
-  border: 2px solid hsl(172, 67%, 45%);
-  outline: none;
-  color: var(--Very-dark-cyan);
+.reset-btn:hover {
+  background-color: #9fe8df;
+  cursor: pointer;
 }
-input:focus:is(.percentage-div input:hover:last-child) {
-  border: 2px solid hsl(172, 67%, 45%);
+
+label:active,
+labe:focus,
+input:active,
+input:focus {
+  border: 2px solid #26c0ab;
   outline: none;
   color: var(--Very-dark-cyan);
 }
 
-input:focus:not(.bill, .number-of-people) {
-  background-color: hsl(172, 67%, 45%);
-  color: var(--Very-dark-cyan);
+input:focus + label {
+  border: 2px solid #26c0ab;
+  outline: none;
+}
+
+.percentage-div input:last-child:focus {
+  border: 2px solid #26c0ab;
 }
 .percentage-div input:hover:last-child,
 .percentage-div input:active:last-child,
 .percentage-div input:focus:last-child {
   background-color: #fff;
-}
-.percentage-div input:last-child {
-  color: var(--Dark-grayish-cyan);
+  border: 2px solid #26c0ab;
+  color: var(--Very-dark-cyan);
 }
 
-.percentage-div input:hover {
-  background-color: #9fe8df;
+.percentage-div label:hover {
+  background-color: #9fe8df !important;
   outline-color: var(--Very-dark-cyan);
   color: var(--Very-dark-cyan);
 }
-.percentage-div input:hover:last-child {
+.percentage-div label:hover:last-child {
   background-color: #fff;
   color: var(--Very-dark-cyan);
+  outline-color: var(--Very-dark-cyan);
 }
-.reset-btn:hover {
-  background-color: #9fe8df;
-  cursor: pointer;
+
+.error {
+  border: 2px solid #e1a696 !important;
+}
+
+.error-message {
+  color: #e1a696;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 /* Desktop design  */
@@ -246,13 +265,14 @@ input:focus:not(.bill, .number-of-people) {
   .bill,
   .number-of-people {
     margin-bottom: 6px;
-    color: var(--Grayish-cyan);
     text-align: right;
     padding-right: 20px;
   }
 
   .percentage-div input {
     width: 116px;
+    text-align: center;
+    color: var(--Very-dark-cyan);
   }
   .percentage-div {
     margin-left: 20px;
@@ -289,5 +309,13 @@ input:focus:not(.bill, .number-of-people) {
   .number-of-people-div {
     position: relative;
     left: 20px;
+  }
+  .error-message {
+    color: #e1a696;
+    display: inline-block;
+    margin-left: 105px;
+  }
+  .percentage-div label {
+    width: 116px;
   }
 }

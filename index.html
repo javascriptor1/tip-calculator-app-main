@@ -24,47 +24,52 @@
         <div><label for="bill">Bill</label></div>
         <div class="bill-div">
           <img src="images/icon-dollar.svg" alt="dollar sign" />
-          <input type="number" id="bill" value="0" class="bill" />
+          <input type="number" id="bill" class="bill" placeholder="0" />
         </div>
         <div class="select-div">
           <label for="tip-percentage">Select Tip %</label>
         </div>
         <div class="percentage-div">
           <input
-            value="5%"
-            type="text"
+            value="5"
+            type="checkbox"
             id="5-percent"
             title="selection 5%"
             readonly="readonly"
           />
+          <label for="5-percent" class="percent-label">5%</label>
           <input
-            value="10%"
-            type="text"
+            value="10"
+            type="checkbox"
             id="10-percent"
             title="selection 10%"
             readonly="readonly"
           />
+          <label for="10-percent" class="percent-label">10%</label>
           <input
-            value="15%"
-            type="text"
+            value="15"
+            type="checkbox"
             id="15-percent"
             title="selection 15%"
             readonly="readonly"
           />
+          <label for="15-percent" class="percent-label">15%</label>
           <input
-            value="25%"
-            type="text"
+            value="25"
+            type="checkbox"
             id="25-percent"
             title="selection 25%"
             readonly="readonly"
           />
+          <label for="25-percent" class="percent-label">25%</label>
           <input
-            value="50%"
-            type="text"
-            id="50-percent"
+            value="50"
+            type="checkbox"
+            id="percent-50"
             title="selection 50%"
             readonly="readonly"
           />
+          <label for="percent-50" class="percent-label">50%</label>
           <input
             type="number"
             id="custom-percentage"
@@ -73,14 +78,16 @@
           />
         </div>
         <div class="number-of-people-div">
-          <div><label for="number-of-people">Number of People</label></div>
+          <div>
+            <label for="number-of-people">Number of People</label>
+            <p class="error-message">Can't be zero</p>
+          </div>
           <img src="images/icon-person.svg" alt="person icon" />
           <input
             type="number"
             id="number-of-people"
-            placeholder=""
+            placeholder="0"
             class="number-of-people"
-            value="0"
           />
         </div>
       </form>
