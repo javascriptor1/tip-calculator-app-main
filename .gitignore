@@ -16,3 +16,5 @@
 .prettierignore
 
 .hintrc
+# Local Netlify folder
+.netlify
