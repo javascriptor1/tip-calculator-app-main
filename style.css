@@ -170,16 +170,20 @@ input:active,
   outline: none;
   color: var(--Very-dark-cyan);
 }
-input:focus,
-.percentage-div input:hover:last-child {
+input:focus:is(.percentage-div input:hover:last-child) {
   border: 2px solid hsl(172, 67%, 45%);
   outline: none;
-  color: #fff;
+  color: var(--Very-dark-cyan);
 }
 
 input:focus:not(.bill, .number-of-people) {
   background-color: hsl(172, 67%, 45%);
   color: var(--Very-dark-cyan);
+}
+.percentage-div input:hover:last-child,
+.percentage-div input:active:last-child,
+.percentage-div input:focus:last-child {
+  background-color: #fff;
 }
 .percentage-div input:last-child {
   color: var(--Dark-grayish-cyan);
