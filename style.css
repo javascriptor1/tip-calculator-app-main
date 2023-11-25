@@ -171,9 +171,12 @@ label[for="number-of-people"] {
 
 /* Active state styling */
 
-.reset-btn:hover {
+.reset-btn:hover:not(.reset-btn:disabled) {
   background-color: #9fe8df;
   cursor: pointer;
+}
+.reset-btn:disabled {
+  cursor:no-drop;
 }
 
 label:active,

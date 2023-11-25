@@ -11,7 +11,7 @@ const resetButton = document.querySelector(".reset-btn");
 const allLabels = document.querySelectorAll(".percent-label");
 const customInput = document.getElementById("custom-percentage");
 const noOfPeopleDiv = document.querySelector(".number-of-people-div");
-const errorMsg = document.querySelector('.error-message')
+const errorMsg = document.querySelector(".error-message");
 let amount = 0;
 let percentage = 0;
 let noOfPeople = 0;
@@ -35,10 +35,10 @@ function customCalculation() {
 
 function numberOfPeople() {
   noOfPeople = +numberOfPeopleInput.value;
-  if (noOfPeople <= 0){
-    errorMsg.style.visibility = 'visible'
-  } else{
-    errorMsg.style.visibility = 'hidden'
+  if (noOfPeople <= 0) {
+    errorMsg.style.visibility = "visible";
+  } else {
+    errorMsg.style.visibility = "hidden";
   }
   calculatetip();
 }
@@ -85,8 +85,24 @@ function calculatetip() {
     tipAmount.textContent = (tipAmountValue / noOfPeople).toFixed(2);
     totalAmount.textContent = (totalValue / noOfPeople).toFixed(2);
     numberOfPeopleInput.classList.remove("error");
+    resetButton.removeAttribute("disabled");
+    resetButton.style["background-color"] = "#9fe8df";
   } else {
     tipAmount.textContent = "0.00";
     totalAmount.textContent = "0.00";
+    resetButton.setAttribute("disabled", "disabled");
+    resetButton.style["background-color"] = "#0d686d";
   }
 }
+
+resetButton.addEventListener("click", () => {
+  tipAmount.textContent = "0.00";
+  totalAmount.textContent = "0.00";
+  inputAmount.value = 0;
+  customInput.value = "";
+  numberOfPeopleInput.value = 0;
+  AllpercentageInput.forEach((labelInput) => {
+    labelInput.nextElementSibling.style["background-color"] = "#00494d";
+    labelInput.nextElementSibling.style.color = "#fff";
+  });
+});
