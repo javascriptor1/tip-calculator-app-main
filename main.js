@@ -21,12 +21,12 @@ numberOfPeopleInput.addEventListener("input", numberOfPeople);
 customInput.addEventListener("input", customCalculation);
 
 function amountInput() {
-  amount = +inputAmount.value;
+  amount = Math.abs(inputAmount.value);
   calculatetip();
 }
 
 function customCalculation() {
-  percentage = +customInput.value;
+  percentage = Math.abs(customInput.value);
   AllpercentageInput.forEach((percentageValue) => {
     updateBg(percentageValue);
   });
